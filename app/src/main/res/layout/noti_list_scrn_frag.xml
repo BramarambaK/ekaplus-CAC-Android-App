@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/header"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:titleTextAppearance="@style/app_bar_ttl_style"
+            style="@style/prox_nova_reg_font"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_bg"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="match_parent"
+                android:id="@+id/back_img"
+                android:src="@drawable/ic_close_white"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/service_ttl"
+                android:layout_toRightOf="@+id/back_img"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:text="@string/notifications"
+                style="@style/prox_nova_reg_font"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/header"
+            android:id="@+id/bids_recycler_view"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/no_notifications"
+            android:layout_below="@+id/header"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/no_noti_tv"/>
+
+    </RelativeLayout>
+</layout>

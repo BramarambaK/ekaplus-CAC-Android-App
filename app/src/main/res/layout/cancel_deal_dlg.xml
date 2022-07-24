@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_20dp"
+        android:background="#ffffffff"
+        android:id="@+id/cancel_view">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hdr"
+        android:text=""
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_18dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:gravity="center"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg"
+        android:layout_below="@+id/hdr"
+        android:text=""
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_18dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remarks_lbl"
+        android:layout_below="@+id/msg"
+        style="@style/prox_nova_reg_font"
+        android:text="@string/remarks_lbl"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:textSize="@dimen/err_dlg_txt_size"
+        android:textColor="@color/err_dlg_txt_clr"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/remarks_edt_txt"
+        android:paddingLeft="@dimen/dime_5dp"
+        android:layout_marginTop="@dimen/dime_5dp"
+        android:minHeight="@dimen/dimen_70dp"
+        android:background="@drawable/border_bg"
+        android:layout_below="@+id/remarks_lbl"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_below="@+id/remarks_edt_txt"
+        android:id="@+id/dlg_footr"
+        android:layout_height="@dimen/dimen_40dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/back"
+            android:id="@+id/back_tv"
+            android:textColor="@color/sign_in_hdr_txt_clr"
+            android:gravity="center"
+            android:background="#EDECEC"
+            android:textSize="@dimen/dimen_16dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cancel_deal_tv"
+            android:layout_marginLeft="@dimen/dime_5dp"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/cancel_deal"
+            android:textColor="@color/sign_in_hdr_txt_clr"
+            android:background="#EDECEC"
+            android:gravity="center"
+            android:textSize="@dimen/dimen_16dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="#ffffffff"
+        android:id="@+id/reject_view">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reject_hdr"
+            android:text="@string/rejection_confirmation"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_18dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lat_bdr_prc_lbl"
+            android:layout_below="@+id/reject_hdr"
+            android:text="@string/latest_bidder_price"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lat_bdr_prc_val"
+            android:layout_below="@+id/lat_bdr_prc_lbl"
+            android:text=""
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:textStyle="bold"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_18dp"
+
+            android:textColor="#000"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reject_msg"
+            android:layout_below="@+id/lat_bdr_prc_val"
+            android:text="@string/you_are_rejecting_the_deal_once_proceeded_can_not_be_reverted"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/rejct_remarks_lbl"
+            android:layout_below="@+id/reject_msg"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/reason_for_rejection_mandatory"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:textSize="@dimen/err_dlg_txt_size"
+            android:textColor="@color/err_dlg_txt_clr"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/rejct_remarks_edttxt"
+            android:paddingLeft="@dimen/dime_5dp"
+
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:minHeight="@dimen/dimen_70dp"
+            android:background="@drawable/border_bg"
+            android:layout_below="@+id/rejct_remarks_lbl"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:id="@+id/filter_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dimen_50dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/cancel"
+                android:id="@+id/cancle_rjct_tv"
+                android:textColor="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#EFEDED"
+                android:textSize="24dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/reject_tv"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/reject"
+                android:textColor="#fff"
+                android:background="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+           android:scaleType="fitXY"
+            android:id="@+id/image_view"
+            android:layout_height="400dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_60dp"
+            android:alpha="0.3"
+            android:background="#000"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_img"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:src="@drawable/ic_arrow_back"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/share_img"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dimen_20dp"
+            android:src="@drawable/ic_share_white"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:layout_below="@+id/image_view"
+            android:text=""
+            android:layout_toLeftOf="@+id/del_item"
+            style="@style/prox_nova_reg_font"/>
+
+        <ImageView
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dime_5dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/image_view"
+            android:id="@+id/del_item"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:id="@+id/desc"
+            android:gravity="center"
+            android:layout_below="@+id/title"
+            android:text=""
+            style="@style/prox_nova_reg_font"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textColor="#878686"
+            android:id="@+id/date_time_tv"
+            android:gravity="right"
+            android:layout_below="@+id/desc"
+            android:text=""
+            style="@style/prox_nova_reg_font"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/vw"
+                android:layout_below="@id/date_time_tv"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="#B6B4B4"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+
+            android:textColor="#000"
+            android:id="@+id/share_feedback_hdr"
+            android:gravity="center"
+            android:layout_below="@+id/vw"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:text="Share Your Feedback"
+            style="@style/prox_nova_reg_font"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dime_5dp"
+            android:layout_below="@+id/share_feedback_hdr"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:id="@+id/footer_feedback"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/dime_5dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/thums_up_btn"
+                android:padding="@dimen/dimen_10dp"
+                android:textAllCaps="false"
+                android:drawableTop="@drawable/right_pred"
+                android:text="@string/right_prediction"
+                android:background="@drawable/comment_btns_bg"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="match_parent"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/dime_5dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/not_sure_btn"
+                android:padding="@dimen/dimen_10dp"
+                android:drawableTop="@drawable/ic_thumb_up"
+                android:visibility="gone"
+                android:text="@string/not_sure"
+                android:background="@drawable/comment_btns_bg"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/dime_5dp"
+                android:scaleType="fitCenter"
+                android:id="@+id/thums_down_btn"
+                android:padding="@dimen/dimen_10dp"
+                android:drawableTop="@drawable/wrong_pred"
+                android:textAllCaps="false"
+                android:text="@string/wrong_prediction"
+                android:background="@drawable/comment_btns_bg"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+</layout>

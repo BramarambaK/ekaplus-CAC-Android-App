@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/header"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:titleTextAppearance="@style/app_bar_ttl_style"
+            style="@style/prox_nova_reg_font"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_bg"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/back_img"
+                android:visibility="visible"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:src="@drawable/ic_arrow_back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/service_ttl"
+                android:layout_toRightOf="@+id/back_img"
+                android:layout_toLeftOf="@+id/fav_img"
+                android:text=""
+                style="@style/prox_nova_reg_font"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/dimen_20dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/more_img"
+                android:visibility="visible"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fc_menu_btn"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_70dp"
+            android:contentDescription=""
+            android:visibility="gone"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/app_primary_clr"
+            android:src="@drawable/ic_menu_white"
+            android:layout_alignParentRight="true"
+
+            android:layout_alignParentBottom="true"/>
+
+        <!--    <com.highsoft.highcharts.core.HIChartView
+                android:id="@+id/chart_view"
+                android:padding="@dimen/dimen_30dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />-->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_below="@+id/header"
+            android:layout_above="@+id/view_line"
+
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/prox_nova_reg_font"
+            android:text="No Insights available."
+            android:layout_below="@+id/header"
+            android:layout_above="@+id/view_line"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="@dimen/dimen_18dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/no_insight_tv"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#9F9B9B"
+            android:id="@+id/view_line"
+            android:visibility="gone"
+            android:layout_above="@+id/footer_view"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/footer_view"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dimen_50dp">
+            <com.eka.cacapp.utils.OnBoardingDotsView
+                android:id="@+id/dots"
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/dimen_20dp"
+                android:gravity="center"
+                />
+
+            <ImageView
+                android:layout_height="40dp"
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_marginTop="8dp"
+                android:padding="@dimen/dimen_2dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:visibility="invisible"
+                android:src="@drawable/insight_list"
+                android:id="@+id/select_insight_img"
+                />
+
+          <TextView
+              android:layout_width="match_parent"
+              android:id="@+id/insight_title"
+              android:layout_toRightOf="@+id/select_insight_img"
+              android:layout_toLeftOf="@+id/slicer_img"
+              android:textColor="@color/black"
+              android:layout_below="@+id/dots"
+              style="@style/prox_nova_reg_font"
+              android:gravity="center"
+              android:text=" "
+              android:textStyle="bold"
+              android:textSize="@dimen/dimen_18dp"
+              android:layout_height="@dimen/dimen_30dp" />
+
+            <ImageView
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_width="@dimen/dimen_40dp"
+                android:padding="@dimen/dimen_2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/slicer"
+                android:id="@+id/slicer_img"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

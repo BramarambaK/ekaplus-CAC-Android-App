@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dime_5dp"
+        android:layout_marginBottom="@dimen/dimen_2dp"
+        android:layout_marginLeft="@dimen/dime_5dp"
+        app:contentPadding="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dime_5dp"
+        android:layout_marginTop="@dimen/dimen_2dp"
+        android:layout_height="wrap_content"
+
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:id="@+id/main_lay"
+            android:orientation="vertical"
+
+            android:layout_height="80dp"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dimen_20dp"
+                android:id="@+id/noti_icon"
+                android:layout_centerVertical="true"
+                android:src="@drawable/noti_yellow_icon"
+                android:layout_height="@dimen/dimen_20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/noti_icon"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ttl"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    style="@style/prox_nova_reg_font"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/noti_icon"
+                android:layout_height="wrap_content"
+                android:id="@+id/limittype"
+                android:layout_below="@+id/ttl"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                style="@style/prox_nova_reg_font"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/noti_icon"
+                android:layout_height="wrap_content"
+                android:id="@+id/meas_name"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:layout_below="@+id/limittype"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="16dp"
+
+                android:textColor="@color/black"
+                style="@style/prox_nova_reg_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@+id/noti_icon"
+                android:layout_height="wrap_content"
+                android:id="@+id/day_tv"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dime_5dp"
+                android:gravity="right"
+                android:text=""
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/black"
+                style="@style/prox_nova_reg_font"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

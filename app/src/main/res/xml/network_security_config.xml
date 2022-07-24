@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">ekaplus.com</domain>
+        <pin-set>
+            <pin digest="SHA-256">TECLvgG5AmWUvbwbl1Xa8VRycYBUX9U7D3J1vbcqcxE=</pin>
+            <pin digest="SHA-256">blKbvizQ7wklAqH+yWjg/huVzRI22JPG7CWdncLy7U4=</pin>
+            <pin digest="SHA-256">uSJ8p1z8catwitr8Z8PW9aPpH8ywjbPwycIYgsrTvds=</pin>
+        </pin-set>
+    </domain-config>
+</network-security-config>

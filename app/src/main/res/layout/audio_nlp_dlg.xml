@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dime_5dp"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:id="@+id/start_record"
+        android:layout_marginLeft="@dimen/dime_5dp"
+        android:text="@string/start_recording"
+        style="@style/prox_nova_reg_font"
+        android:textSize="17dp"
+        android:textStyle="bold"
+
+        android:textColor="@color/app_primary_clr"
+        android:gravity="left|center_vertical"
+        android:scaleType="fitCenter" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:id="@+id/skip"
+        android:text="@string/skip_txt"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/dime_5dp"
+        android:layout_alignParentRight="true"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_16dp"
+        android:textColor="@color/app_primary_clr"
+        android:gravity="center_vertical"
+        android:scaleType="fitCenter" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content_txt"
+        android:minHeight="200dp"
+        android:layout_margin="@dimen/dime_5dp"
+        android:layout_below="@+id/start_record"
+        android:background="@drawable/recorded_txt_bg"
+
+        android:padding="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_alignParentRight="true"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_16dp"
+        android:textColor="@color/app_primary_clr"
+        android:gravity="left"
+        android:scaleType="fitCenter" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dime_5dp"
+        android:layout_below="@+id/content_txt"
+        android:weightSum="2">
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/dime_5dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.20"
+
+        android:text="@string/clear"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/sign_in_txt_clr"
+        android:background="@drawable/login_btn_bg"
+        style="@style/prox_nova_reg_font"
+        />
+    <Button
+        android:id="@+id/proceed"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dime_5dp"
+        android:gravity="center"
+        android:text="@string/proceed"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/sign_in_txt_clr"
+        android:background="@drawable/login_btn_bg"
+        style="@style/prox_nova_reg_font"
+        />
+    </LinearLayout>
+
+
+</RelativeLayout>

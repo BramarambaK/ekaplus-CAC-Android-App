@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/dash_nav_graph"
+    app:startDestination="@id/favoriteCatFrag">
+
+    <fragment
+        android:id="@+id/dashboardFrag"
+        android:name="com.eka.cacapp.ui.dashboard.DashboardFrag"
+        android:label="DashboardFrag" >
+        <action
+            android:id="@+id/action_dashboardFrag_to_favoriteCatFrag"
+            app:destination="@id/favoriteCatFrag" />
+        <action
+            android:id="@+id/action_dashboardFrag_to_appSubListFrag"
+            app:destination="@id/appSubListFrag" />
+        <action
+            android:id="@+id/action_dashboardFrag_to_appDetailFrag"
+            app:popUpTo="@+id/dashboardFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/appDetailFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteCatFrag"
+        android:name="com.eka.cacapp.ui.fav.FavoriteCatFrag"
+        android:label="FavoriteCatFrag" >
+        <action
+            android:id="@+id/action_favoriteCatFrag_to_dashboardFrag"
+            app:destination="@id/dashboardFrag" />
+        <action
+            android:id="@+id/action_favoriteCatFrag_to_appDetailFrag"
+            app:destination="@id/appDetailFrag" />
+        <action
+            android:id="@+id/action_favoriteCatFrag_to_diseaseIdenHome"
+            app:destination="@id/diseaseIdenHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/appSubListFrag"
+        android:name="com.eka.cacapp.ui.dashboard.AppSubListFrag"
+        android:label="AppSubListFrag" >
+        <action
+            android:id="@+id/action_appSubListFrag_to_appDetailFrag"
+            app:destination="@id/appDetailFrag" />
+        <action
+            android:id="@+id/action_appSubListFrag_to_genAppDetailFrag"
+            app:destination="@id/genAppDetailFrag" />
+        <action
+            android:id="@+id/action_appSubListFrag_to_diseaseIdenHome"
+            app:destination="@id/diseaseIdenHome" />
+        <action
+            android:id="@+id/action_appSubListFrag_to_dashboardFrag"
+            app:destination="@id/dashboardFrag"
+            app:popUpTo="@+id/dashboardFrag"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/appDetailFrag"
+        android:name="com.eka.cacapp.ui.dashboard.WorkFlowAppDetailFrag"
+        android:label="AppDetailFrag" >
+        <action
+            android:id="@+id/action_appDetailFrag_to_insightDetailFrag"
+            app:destination="@id/insightDetailFrag" />
+        <action
+            android:id="@+id/action_appDetailFrag_to_bidderHomeFrag"
+            app:destination="@id/bidderHomeFrag"
+            />
+<!--            app:popUpTo="@+id/appDetailFrag"
+app:popUpToInclusive="true"
+-->
+        <action
+            android:id="@+id/action_appDetailFrag_to_offrerHomeFrag"
+
+            app:destination="@id/offrerHomeFrag"
+           />
+<!--
+            app:popUpTo="@+id/appDetailFrag"
+ app:popUpToInclusive="true"
+-->
+    </fragment>
+    <fragment
+        android:id="@+id/qtcListFrag"
+        android:name="com.eka.cacapp.ui.workflow.QtcListFrag"
+        android:label="QtcListFrag" />
+    <fragment
+        android:id="@+id/genAppDetailFrag"
+        android:name="com.eka.cacapp.ui.dashboard.AppDetailFrag"
+        android:label="GenAppDetailFrag" />
+    <fragment
+        android:id="@+id/qtcCompositeFrag"
+        android:name="com.eka.cacapp.ui.workflow.QtcCompositeFrag"
+        android:label="QtcCompositeFrag" >
+        <action
+            android:id="@+id/action_qtcCompositeFrag_self"
+            app:destination="@id/qtcCompositeFrag" />
+        <action
+            android:id="@+id/action_qtcCompositeFrag_to_favoriteCatFrag"
+            app:destination="@id/favoriteCatFrag" />
+        <action
+            android:id="@+id/action_qtcCompositeFrag_to_appDetailFrag"
+            app:popUpTo="@+id/appDetailFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/appDetailFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/qtcFormFrag"
+        android:name="com.eka.cacapp.ui.workflow.QtcFormFrag"
+        android:label="QtcFormFrag" >
+        <action
+            android:id="@+id/action_qtcFormFrag_self"
+            app:destination="@id/qtcFormFrag" />
+        <action
+            android:id="@+id/action_qtcFormFrag_to_favoriteCatFrag"
+            app:destination="@id/favoriteCatFrag" />
+        <action
+            android:id="@+id/action_qtcFormFrag_to_appDetailFrag"
+            app:popUpTo="@+id/appDetailFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/appDetailFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/insightDetailFrag"
+        android:name="com.eka.cacapp.ui.insight.InsightDetailFrag"
+        android:label="InsightDetailFrag" >
+        <action
+            android:id="@+id/action_insightDetailFrag_to_appDetailFrag"
+            app:destination="@id/appDetailFrag"
+            app:popUpTo="@+id/appDetailFrag"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_insightDetailFrag_self"
+            app:destination="@id/insightDetailFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/diseaseIdenHome"
+        android:name="com.eka.cacapp.ui.diseaseIdent.DiseaseIdenHome"
+        android:label="DiseaseIdenHome" >
+        <action
+            android:id="@+id/action_diseaseIdenHome_to_diseaseIdenDetails"
+            app:destination="@id/diseaseIdenDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/bidderHomeFrag"
+        android:name="com.eka.cacapp.ui.farmerConnect.BidderHomeFrag"
+        android:label="BidderHomeFrag" >
+
+        <action
+            android:id="@+id/action_bidderHomeFrag_to_bidDetailsFrag"
+            app:destination="@id/bidDetailsFrag" />
+        <action
+            android:id="@+id/action_bidderHomeFrag_to_pulishedPriceDetailsFrag"
+            app:destination="@id/pulishedPriceDetailsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/offrerHomeFrag"
+        android:name="com.eka.cacapp.ui.farmerConnect.OffrerHomeFrag"
+        android:label="OffrerHomeFrag" >
+
+        <action
+            android:id="@+id/action_offrerHomeFrag_to_createOfferFrag"
+            app:destination="@id/createOfferFrag" />
+        <action
+            android:id="@+id/action_offrerHomeFrag_to_pulishedPriceDetailsFrag"
+            app:destination="@id/pulishedPriceDetailsFrag" />
+        <action
+            android:id="@+id/action_offrerHomeFrag_to_bidDetailsFrag"
+            app:destination="@id/bidDetailsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOfferFrag"
+        android:name="com.eka.cacapp.ui.farmerConnect.CreateOfferFrag"
+        android:label="CreateOfferFrag" >
+        <action
+            android:id="@+id/action_createOfferFrag_to_offrerHomeFrag"
+            app:destination="@id/offrerHomeFrag" />
+        <action
+            android:id="@+id/action_createOfferFrag_self"
+            app:popUpTo="@+id/createOfferFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/createOfferFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/pulishedPriceDetailsFrag"
+        android:name="com.eka.cacapp.ui.farmerConnect.PulishedPriceDetailsFrag"
+        android:label="PulishedPriceDetailsFrag" >
+        <action
+            android:id="@+id/action_pulishedPriceDetailsFrag_to_createOfferFrag"
+            app:destination="@id/createOfferFrag"
+            app:popUpTo="@+id/pulishedPriceDetailsFrag"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/bidDetailsFrag"
+        android:name="com.eka.cacapp.ui.farmerConnect.BidDetailsFrag"
+        android:label="BidDetailsFrag" />
+    <fragment
+        android:id="@+id/notificationListScreenFrag"
+        android:name="com.eka.cacapp.ui.notidtl.NotificationListScreenFrag"
+        android:label="NotificationListScreenFrag" >
+        <action
+            android:id="@+id/action_notificationListScreenFrag_to_notifiListDetailsFrag"
+            app:popUpTo="@+id/notifiListDetailsFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/notifiListDetailsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifiListDetailsFrag"
+        android:name="com.eka.cacapp.ui.notidtl.NotifiListDetailsFrag"
+        android:label="NotifiListDetailsFrag" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.eka.cacapp.ui.dashboard.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_appDetailFrag"
+            app:destination="@id/appDetailFrag" />
+        <action
+            android:id="@+id/action_searchFragment_to_diseaseIdenHome"
+            app:destination="@id/diseaseIdenHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectCompositeFrag"
+        android:name="com.eka.cacapp.ui.workflow.ConnectCompositeFrag"
+        android:label="ConnectCompositeFrag" />
+    <fragment
+        android:id="@+id/diseaseIdenDetails"
+        android:name="com.eka.cacapp.ui.diseaseIdent.DiseaseIdenDetails"
+        android:label="DiseaseIdenDetails" />
+</navigation>

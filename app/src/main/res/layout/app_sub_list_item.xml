@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dime_5dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/cat_list_bg"
+            android:layout_height="@dimen/dimen_70dp"
+            >
+            <View
+                android:layout_width="@dimen/dimen_10dp"
+                android:id="@+id/view"
+                android:background="@color/dash_row_start_clr"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/category_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="@color/dash_row_text_clr"
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_toRightOf="@+id/view"
+                android:layout_toLeftOf="@+id/fav_img"
+                style="@style/prox_nova_reg_font"
+                />
+
+            <ImageView
+                android:id="@+id/fav_img"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="@dimen/dimen_30dp"
+
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:src="@drawable/ic_star_border"
+                android:textSize="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

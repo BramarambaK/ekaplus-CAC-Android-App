@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_lay"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/hdr"
+            android:background="@drawable/ll_with_bottom_border"
+            android:layout_height="@dimen/dimen_50dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/close_icon"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/what_i_am_seeing"
+                android:id="@+id/ttl"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/dimen_20dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:id="@+id/basic_view"
+            android:background="#fff"
+            android:layout_below="@+id/hdr"
+            android:layout_width="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/basic_dyn_ll"
+
+                android:layout_margin="@dimen/dimen_16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txt_vw"
+                    android:text=""
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textSize="17dp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

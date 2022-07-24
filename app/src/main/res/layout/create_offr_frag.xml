@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_lay"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/new_offr_hdr"
+
+            android:background="@drawable/ll_with_bottom_border"
+            android:layout_height="@dimen/dimen_50dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/close_icon"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/new_offer_ttl"
+                android:id="@+id/ttl"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/dimen_20dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/new_offr_hdr"
+            android:layout_above="@+id/new_offr_footer"
+            android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/form_lay"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/page_one">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/offer_type_lbl"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/offer_type_lbl"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/offer_type_lay"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/sale_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="@string/sales"
+                    android:textColor="@color/app_primary_clr"
+
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:textSize="14dp"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="@dimen/dime_5dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+                <Button
+                    android:id="@+id/purchase_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:text="@string/purchase"
+                    android:textColor="@color/app_primary_clr"
+                    android:textSize="14dp"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dime_5dp"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/product_lbl"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/product_lbl"/>
+            <Spinner
+                android:id="@+id/product_spnr"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dime_5dp"
+                android:layout_height="@dimen/dimen_40dp"
+
+                android:overlapAnchor="false"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:background="@drawable/login_edt_background"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/quality_lbl"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/quality_lbl"/>
+            <Spinner
+                android:id="@+id/quality_spnr"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dime_5dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:overlapAnchor="false"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:background="@drawable/login_edt_background"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/crop_year_lbl"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/crop_yr_lbl"/>
+            <Spinner
+                android:id="@+id/crop_yr_spnr"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dime_5dp"
+                android:layout_height="@dimen/dimen_40dp"
+
+                android:overlapAnchor="false"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:background="@drawable/login_edt_background"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/publish_price_lbl"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/pub_prc_lbl"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pub_prc_lay"
+                android:minHeight="52dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/pub_prc_edt_txt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+                <Spinner
+                    android:id="@+id/pub_prc_spnr"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/quantity_lbl"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/quantity_lbl"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantity_lay"
+                android:weightSum="2"
+                android:minHeight="52dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/quantity_edt_txt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+                <Spinner
+                    android:id="@+id/quantity_spnr"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/payment_term_lbl"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/fc_offr_form_lbl_sz"
+                android:id="@+id/payment_term_lbl"/>
+            <Spinner
+                android:id="@+id/payment_term_spnr"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dime_5dp"
+                android:layout_height="@dimen/dimen_40dp"
+
+                android:overlapAnchor="false"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:background="@drawable/login_edt_background"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+
+                android:layout_marginRight="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/page_two">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/expiry_date_lbl"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/expry_dt_lbl"/>
+
+                <EditText
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/expry_dt_edt_txt"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:singleLine="true"
+                    android:hint="yyyy-mm-dd"
+                    android:inputType="number"
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:drawableRight="@drawable/ic_calendar_fc"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/location"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/location_lbl"/>
+                <Spinner
+                    android:id="@+id/location_spnr"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/inco_term"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/inco_term_lbl"/>
+                <Spinner
+                    android:id="@+id/inco_term_spnr"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/delivery_period"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/del_per_lbl"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/del_per_lay"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/del_from_edt_txt"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/dime_5dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:singleLine="true"
+                        android:hint="yyyy-mm-dd"
+                        android:inputType="number"
+                        android:overlapAnchor="false"
+                        android:layout_marginTop="@dimen/dime_5dp"
+                        android:background="@drawable/login_edt_background"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:drawableRight="@drawable/ic_calendar_fc"
+                        android:layout_marginRight="@dimen/dime_5dp"
+                        style="@style/prox_nova_reg_font"
+                        />
+
+                    <EditText
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/del_to_edt_txt"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:hint="yyyy-mm-dd"
+                        android:padding="@dimen/dime_5dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:drawableRight="@drawable/ic_calendar_fc"
+                        android:overlapAnchor="false"
+                        android:layout_marginTop="@dimen/dime_5dp"
+                        android:background="@drawable/login_edt_background"
+                        android:layout_marginLeft="@dimen/dime_5dp"
+
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        style="@style/prox_nova_reg_font"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/packing_type"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/packing_type_lbl"/>
+                <Spinner
+                    android:id="@+id/packing_type_spnr"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/packing_size"
+                    android:layout_marginTop="@dimen/dimen_16dp"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/fc_offr_form_lbl_sz"
+                    android:id="@+id/packing_sz_lbl"/>
+                <Spinner
+                    android:id="@+id/packing_size_spnr"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dime_5dp"
+                    android:layout_height="@dimen/dimen_40dp"
+
+                    android:overlapAnchor="false"
+                    android:layout_marginTop="@dimen/dime_5dp"
+                    android:background="@drawable/login_edt_background"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_20dp"/>
+        </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:id="@+id/new_offr_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dimen_50dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/cancel"
+                android:id="@+id/cancel_tv"
+                android:textColor="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="#F8F6F6"
+                android:textSize="@dimen/sign_in_hdr_txt_size"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/next_tv"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/next"
+                android:textColor="#fff"
+                android:background="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/sign_in_hdr_txt_size"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

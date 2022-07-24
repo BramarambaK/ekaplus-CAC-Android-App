@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.DesignDomainPage">
+
+          <ImageView
+              android:layout_width="wrap_content"
+
+              android:id="@+id/eka_icon"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              android:layout_marginBottom="@dimen/dimen_100dp"
+              android:src="@drawable/ic_eka_logo"
+              app:layout_constraintBottom_toTopOf="@id/sign_in_btn_lay"
+              android:layout_height="wrap_content"
+              android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/sign_in_btn_lay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sign_in_eka_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="1.20"
+                    android:textSize="@dimen/sign_in_btn_txt_size"
+                    android:text="@string/sign_in_with_eka"
+                    android:textColor="@color/sign_in_txt_clr"
+                    android:background="@drawable/login_btn_bg"
+                    style="@style/prox_nova_reg_font"
+
+                    />
+                <Button
+                    android:id="@+id/sign_in_okta"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:lineSpacingMultiplier="1.20"
+                    android:textSize="@dimen/sign_in_btn_txt_size"
+                    android:text="@string/sign_in_with_okta"
+                    android:textColor="@color/sign_in_txt_clr"
+                    android:background="@drawable/login_btn_bg"
+                    style="@style/prox_nova_reg_font"
+                    />
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:background="@drawable/azure_btn_bg"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:id="@+id/sign_in_azure_lay"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/sign_in_azure"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ms_login_icon_dr"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:lineSpacingMultiplier="1.20"
+                    android:textSize="@dimen/sign_in_btn_txt_size"
+                    android:text="@string/sign_in_with_microsoft"
+                    android:textColor="@color/sign_in_txt_clr"
+                    android:background="@drawable/azure_btn_bg"
+                    style="@style/prox_nova_reg_font"
+                    />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/change_tenant_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_60dp"
+                android:text="@string/change_tenant"
+                style="@style/prox_nova_reg_font"
+                android:lineSpacingMultiplier="1.19"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_btn_lay"
+                android:textColor="@color/change_tenant_txt_clr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/change_tenant_txt_size" />
+
+
+<!--            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:id="@+id/vera_code_img"
+                app:layout_constraintTop_toBottomOf="@+id/change_tenant_tv"
+                app:layout_constraintBottom_toTopOf="@+id/term_and_cond_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/vera_code_img"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:contentDescription="@string/app_name" />-->
+
+            <TextView
+                android:id="@+id/term_and_cond_tv"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:text="@string/term_cond_sign_in_page"
+                style="@style/prox_nova_reg_font"
+                app:layout_constraintBottom_toTopOf="@+id/version_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+            <TextView
+                android:id="@+id/version_tv"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                style="@style/prox_nova_reg_font"
+                app:layout_constraintBottom_toTopOf="@+id/eka_footer_tv"
+                android:textColor="@color/version_txt_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/eka_footer_tv"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_60dp"
+                android:layout_marginRight="@dimen/dimen_60dp"
+                android:text="@string/eka_footer_txt"
+                style="@style/prox_nova_reg_font"
+                android:textColor="@color/eka_footer_txt_clr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

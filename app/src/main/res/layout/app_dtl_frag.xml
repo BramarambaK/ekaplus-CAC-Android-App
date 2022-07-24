@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:layout_above="@+id/dots"
+        />
+
+    <com.eka.cacapp.utils.OnBoardingDotsView
+        android:id="@+id/dots"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_margin="@dimen/dime_5dp"
+        android:gravity="center"
+
+        />
+</RelativeLayout>
+</layout>

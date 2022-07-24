@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/domainVerifyFrag">
+
+    <fragment
+        android:id="@+id/domainVerifyFrag"
+        android:name="com.eka.cacapp.ui.domainVerfiy.DomainVerifyFrag"
+        android:label="DomainVerifyFrag" >
+        <action
+            android:id="@+id/action_domainVerifyFrag_to_singInOptionsFrag"
+            app:destination="@id/singInOptionsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/singInOptionsFrag"
+        android:name="com.eka.cacapp.ui.signInOptions.SingInOptionsFrag"
+        android:label="SingInOptionsFrag" >
+        <action
+            android:id="@+id/action_singInOptionsFrag_to_loginWithEkaFrag"
+            app:destination="@id/loginWithEkaFrag" />
+        <action
+            android:id="@+id/action_singInOptionsFrag_to_domainVerifyFrag"
+            app:destination="@id/domainVerifyFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginWithEkaFrag"
+        android:name="com.eka.cacapp.ui.loginWithEka.LoginWithEkaFrag"
+        android:label="LoginWithEkaFrag" >
+        <action
+            android:id="@+id/action_loginWithEkaFrag_to_singInOptionsFrag"
+            app:destination="@id/singInOptionsFrag" />
+        <action
+            android:id="@+id/action_loginWithEkaFrag_to_mfaOtpVeriFrag"
+
+            app:popUpTo="@+id/mfaOtpVeriFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/mfaOtpVeriFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/mfaOtpVeriFrag"
+        android:name="com.eka.cacapp.ui.loginWithEka.MfaOtpVeriFrag"
+        android:label="MfaOtpVeriFrag" >
+        <action
+            android:id="@+id/action_mfaOtpVeriFrag_to_loginWithEkaFrag"
+            app:popUpTo="@+id/loginWithEkaFrag"
+            app:popUpToInclusive="true"
+            app:destination="@id/loginWithEkaFrag" />
+    </fragment>
+</navigation>

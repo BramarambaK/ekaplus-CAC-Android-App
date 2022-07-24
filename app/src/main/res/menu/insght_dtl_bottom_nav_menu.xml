@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_legend"
+        android:icon="@drawable/ic_legend"
+        android:title="Legend"/>
+
+    <item
+        android:id="@+id/navigation_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="Sort"/>
+
+    <item
+        android:id="@+id/navigation_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="Filter"/>
+    <item
+        android:id="@+id/navigation_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"/>
+
+</menu>

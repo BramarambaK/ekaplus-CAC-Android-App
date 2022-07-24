@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:text=""
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="22dp"
+            android:layout_toRightOf="@+id/view"
+            android:layout_toLeftOf="@+id/app_count_tv"
+            style="@style/prox_nova_reg_font"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dyn_ll"
+            android:layout_margin="@dimen/dime_5dp"
+            android:orientation="vertical"/>
+
+
+        <TextView
+            android:id="@+id/affected_ttl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="italic"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:text="@string/affected_data_views"
+            android:textColor="#000"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_toRightOf="@+id/view"
+            android:layout_toLeftOf="@+id/app_count_tv"
+            style="@style/prox_nova_reg_font"
+            />
+
+        <TextView
+            android:id="@+id/affected_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_toRightOf="@+id/view"
+            android:layout_toLeftOf="@+id/app_count_tv"
+            style="@style/prox_nova_reg_font"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:background="#8E8B8B"/>
+    </LinearLayout>
+
+
+
+</layout>

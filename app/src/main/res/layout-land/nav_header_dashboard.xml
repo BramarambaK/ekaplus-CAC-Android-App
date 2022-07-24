@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_100dp"
+
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/headerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:scaleType="center"
+        android:src="@drawable/ic_eka_logo" />
+    <TextView
+        android:layout_below="@+id/headerImageView"
+        android:layout_marginLeft="@dimen/dimen_16dp"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:id="@+id/first_letter_tv"
+        android:textSize="@dimen/dimen_20dp"
+        android:background="@drawable/first_name_circle_bg"
+        style="@style/prox_nova_reg_font"
+        />
+    <TextView
+        android:layout_below="@+id/headerImageView"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:id="@+id/client_name_tv"
+        android:gravity="left|center_vertical"
+
+        android:layout_toRightOf="@+id/first_letter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_40dp"
+        android:textColor="#002D49"
+        android:layout_toLeftOf="@+id/settings_icon"
+        android:textSize="@dimen/dimen_20dp"
+        style="@style/prox_nova_reg_font"
+        />
+
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:src="@drawable/ic_settings"
+        android:scaleType="center"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_below="@+id/headerImageView"
+        android:layout_alignParentRight="true"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#002D49"/>
+
+</RelativeLayout>

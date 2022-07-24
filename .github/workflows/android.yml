@@ -1,0 +1,29 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  build:
+    name: Upload apk to App Tester
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: build release 
+      run: bash ./gradlew assembleDebug
+    - name: Firebase App Distribution
+      uses: wzieba/Firebase-Distribution-Github-Action@v1.3.3
+
+      with:
+        appId: '1:1017102760886:android:a1448d02721a0e30'
+        token: '1//0g7-sRdEK0M-eCgYIARAAGBASNwF-L9IrqMkUpYwQGhODsqiECIGmdX1Ebkv_o6Ixz00NZ5uqkYp71lhQ_PzKsUWNkHL4k3IL2WI'
+        groups: testers
+        file: app/build/outputs/apk/debug/app-debug.apk   

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/parent_lay"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/hdr"
+            android:background="@drawable/ll_bottom_border_swtch_corp"
+            android:layout_height="@dimen/dimen_40dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/prox_nova_reg_font"
+                android:text="Switch Corporate"
+                android:id="@+id/ttl"
+                android:textColor="#2E2D2D"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hdr"
+            android:text=""
+            style="@style/prox_nova_reg_font"
+            android:paddingLeft="@dimen/dime_5dp"
+            android:paddingRight="@dimen/dime_5dp"
+
+            android:textColor="#121111"
+            android:textSize="15dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:id="@+id/sub_hdr"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_hdr"
+            android:text="Switch corporate to"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:textColor="#121111"
+            android:textSize="@dimen/dimen_16dp"
+            style="@style/prox_nova_reg_font"
+            android:padding="@dimen/dime_5dp"
+            android:id="@+id/actions_txt"
+            />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_40dp"
+            android:weightSum="5"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:background="@drawable/swtch_crp_spnr_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/spnr_arrow"
+                android:src="@drawable/arrow_down" />
+            <Spinner
+                android:id="@+id/oper_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:overlapAnchor="false"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dropdown" />
+
+        </RelativeLayout>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkbox"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            style="@style/prox_nova_reg_font"
+            android:text="I agree to switch my corporate"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dime_5dp"
+            android:layout_marginBottom="@dimen/dime_5dp"
+            android:id="@+id/view_line"
+            android:background="#817C7C"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:id="@+id/filter_footer"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dimen_40dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/prox_nova_reg_font"
+                android:text="Cancel"
+                android:id="@+id/cancel_tv"
+                android:textColor="#454444"
+                android:textStyle="bold"
+
+                android:gravity="center"
+                android:background="@drawable/swtch_crp_can_btn"
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_height="match_parent"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/apply_tv"
+                style="@style/prox_nova_reg_font"
+                android:text="Switch"
+                android:textColor="#fff"
+                android:background="@drawable/swtch_btn_bg"
+                android:textStyle="bold"
+                android:gravity="center"
+
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

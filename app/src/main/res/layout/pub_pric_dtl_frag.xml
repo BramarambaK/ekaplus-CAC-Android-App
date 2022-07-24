@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_lay"
+        >
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/offr_dtl_hdr"
+
+            android:background="@drawable/ll_with_bottom_border"
+            android:layout_height="@dimen/dimen_40dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/back_icon"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:src="@drawable/ic_arrow_back_gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_25dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/prox_nova_reg_font"
+                android:text=""
+                android:id="@+id/ttl"
+                android:layout_toRightOf="@+id/back_icon"
+                android:layout_toLeftOf="@+id/more_img"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/more_img"
+                android:src="@drawable/ic_fc_more"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_25dp"/>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/pub_offr_lv"
+            android:visibility="visible"
+            android:layout_below="@+id/offr_dtl_hdr"
+            android:layout_width="match_parent"
+            android:divider="@null"
+            android:layout_height="wrap_content"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pub_offr_lv"
+
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_20dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

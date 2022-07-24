@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_lay"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/need_help_hdr"
+            android:background="@drawable/ll_with_bottom_border"
+            android:layout_height="@dimen/dimen_50dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/close_icon"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/need_help"
+                android:id="@+id/ttl"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/dimen_20dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <WebView
+            android:layout_width="match_parent"
+            android:id="@+id/web_view"
+            android:layout_below="@+id/need_help_hdr"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</layout>

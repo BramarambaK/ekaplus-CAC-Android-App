@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_20dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_toLeftOf="@+id/balance_tv"
+            android:text="@string/image_analysis_result"
+            style="@style/prox_nova_reg_font"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_18dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:textColor="#000"
+            android:id="@+id/balance_tv"
+            android:layout_alignParentRight="true"
+            android:text=""
+            style="@style/prox_nova_reg_font"/>
+
+       <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+           android:layout_width="match_parent"
+           android:id="@+id/pull_to_refresh"
+           android:layout_below="@+id/balance_tv"
+           android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/dis_list"
+            android:layout_height="match_parent"/>
+       </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/app_primary_clr"
+            android:layout_alignParentRight="true"
+            app:backgroundTint="@color/app_primary_clr"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            android:id="@+id/add_img"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dimen_30dp"
+            android:src="@drawable/ic_add_icon"/>
+    </RelativeLayout>
+</layout>

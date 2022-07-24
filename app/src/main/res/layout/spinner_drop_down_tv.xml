@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:minWidth="250dp"
+    android:maxWidth="250dp"
+    android:layout_height="@dimen/dimen_40dp"
+    android:textColor="@color/black"
+    android:padding="@dimen/dimen_10dp"
+    android:gravity="left|center_vertical"
+    style="@style/prox_nova_reg_font"
+    android:textSize="@dimen/dimen_16dp"
+    android:background="@drawable/spinner_item_divider" />

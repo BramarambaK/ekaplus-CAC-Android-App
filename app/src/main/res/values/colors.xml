@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="qtc_list_footr_bg">#E6E4E4</color>
+
+    <color name="app_primary_clr">#002D49</color>
+
+    <color name="onboarding_txt_clr">#002D49</color>
+    <color name="skip_btn_txt_clr">#3E81CF</color>
+    <color name="change_tenant_txt_clr">#3E81CF</color>
+    <color name="welcome_to_txt_clr">#002D49</color>
+    <color name="sign_in_txt_clr">#fff</color>
+    <color name="domain_name_txt_clr">#333333</color>
+    <color name="domain_next_btn_clr">#002D49</color>
+    <color name="sing_in_btn_clr">#002D49</color>
+    <color name="on_boaring_dot_sel_clr">#FF0042</color>
+    <color name="on_boarding_dot_brdr_clr">#FF0042</color>
+    <color name="on_boarding_dot_un_sel_clr">#D6A5B2</color>
+    <color name="domain_edt_view_clr">#2D7EBC</color>
+    <color name="domain_hint_txt_clr">#333333</color>
+    <color name="doman_next_btn_txt_clr">#fff</color>
+    <color name="transparent">#00FF0042</color>
+    <color name="status_bar_color">#00FF0042</color>
+    <color name="terms_cond_clr_2">#2D7EBC</color>
+    <color name="terms_cond_clr_1">#333333</color>
+    <color name="version_txt_color">#333333</color>
+    <color name="sign_in_with_ur_cred_txt_color">#333333</color>
+    <color name="eka_footer_txt_clr">#333333</color>
+    <color name="user_name_txt_clr">#333333</color>
+    <color name="pass_txt_clr">#333333</color>
+    <color name="problem_login_txt_clr">#2D7EBC</color>
+    <color name="back_txt_clr">#2D7EBC</color>
+    <color name="error_dlg_hdr_bg">#DA5F6A</color>
+    <color name="err_dlg_txt_clr">#ff000000</color>
+    <color name="err_dlg_btn_bg">#DA5F6A</color>
+    <color name="cat_list_bg">#002D49</color>
+    <color name="dash_row_start_clr">#FF0042</color>
+    <color name="dash_row_text_clr">#fff</color>
+    <color name="sign_in_hdr_txt_clr">#002D49</color>
+    <color name="toolbar_bg">#002D49</color>
+    <color name="selected_tab_bg">#002D49</color>
+    <color name="nav_menu_lst_item_clr">#002D49</color>
+    <color name="card_view_line_bg">#DDD9D9</color>
+    <color name="qtc_list_lbl_hint_clr">#706D6D</color>
+    <color name="search_flt_btn_bg">#002D49</color>
+    <color name="recommended_fld_bg">#CFB66A</color>
+    <color name="red_color">#810727</color>
+    <color name="table_row_bg">#EDE9EA</color>
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tool_bg">#151414</color>
+    <color name="semi_black_transparent">#99000000</color>
+    <color name="default_nav_bg">#FAFAFA</color>
+    <color name="rate_now_clr">#0066FF</color>
+    <color name="rating_str_clr">#002D49</color>
+    <color name="sel_view_clr">#5903A9F4</color>
+    <color name="resned_otp_enbl_txt_clr">#2D7EBC</color>
+    <color name="resned_otp_dsbl_txt_clr">#555657</color>
+    <color name="error_txt_clr">#F44336</color>
+    <color name="learn_more_txt_bg">#D1E2F1</color>
+    <color name="usr_prfl_lbl_clr">#555657</color>
+    <color name="date_range_clr">#969697</color>
+
+</resources>

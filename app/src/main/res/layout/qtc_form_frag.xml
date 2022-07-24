@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/header"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        app:titleTextAppearance="@style/app_bar_ttl_style"
+        style="@style/prox_nova_reg_font"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg"
+     >
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="match_parent"
+            android:id="@+id/cancel_txt"
+            android:text="@string/cancel"
+
+            style="@style/prox_nova_reg_font"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_18dp"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/service_ttl"
+            android:layout_toRightOf="@+id/cancel_txt"
+            android:layout_toLeftOf="@+id/next_txt"
+            android:text=""
+            style="@style/prox_nova_reg_font"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/more_img"
+            android:visibility="invisible"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:layout_toLeftOf="@+id/next_txt"
+            android:src="@drawable/ic_more"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/next_txt"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:text="@string/save"
+            style="@style/prox_nova_reg_font"
+            android:paddingRight="@dimen/dimen_20dp"
+            android:textSize="@dimen/dimen_18dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/details_view"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:id="@+id/detailCard"
+                    app:cardCornerRadius="@dimen/dimen_10dp"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/details_view1"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_height="wrap_content">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:id="@+id/detailCard1"
+                    app:cardCornerRadius="@dimen/dimen_10dp"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    </LinearLayout>
+</layout>

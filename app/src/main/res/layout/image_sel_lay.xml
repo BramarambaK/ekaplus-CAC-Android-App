@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/dimen_20dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:id="@+id/take_photo"
+        android:text="@string/take_photo"
+        android:textColor="@color/app_primary_clr"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:textStyle="bold"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_20dp"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="?android:attr/listDivider"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:id="@+id/open_gall"
+        android:text="@string/open_gallery"
+        android:textColor="@color/app_primary_clr"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:textStyle="bold"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_20dp"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="?android:attr/listDivider"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:id="@+id/cancel"
+        android:text="@string/cancel"
+        android:textColor="@color/app_primary_clr"
+        android:paddingLeft="@dimen/dimen_20dp"
+
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_20dp"
+        android:gravity="center"/>
+
+
+</LinearLayout>

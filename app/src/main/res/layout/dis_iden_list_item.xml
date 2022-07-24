@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dime_5dp"
+        android:layout_margin="@dimen/dime_5dp"
+        android:layout_height="160dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:layout_width="160dp"
+                android:id="@+id/image_view"
+                android:scaleType="fitXY"
+                android:layout_height="160dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:padding="@dimen/dimen_16dp"
+                android:layout_toRightOf="@+id/image_view"
+                android:id="@+id/in_progress_img_view"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_toLeftOf="@+id/del_item"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dime_5dp"
+                android:layout_marginBottom="@dimen/dime_5dp"
+                android:textSize="@dimen/dimen_18dp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                style="@style/prox_nova_reg_font"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/image_view"
+                android:id="@+id/title"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/prox_nova_reg_font"
+                android:maxLines="3"
+                android:layout_toLeftOf="@+id/del_item"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dime_5dp"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:layout_marginBottom="@dimen/dime_5dp"
+                android:textSize="15dp"
+                android:layout_below="@+id/title"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/image_view"
+                android:id="@+id/sub_title"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_above="@+id/img_name"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="#C1BFBF"
+                android:id="@+id/view_line"
+                android:layout_toRightOf="@+id/image_view"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/prox_nova_reg_font"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:textSize="15dp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:layout_marginRight="@dimen/dime_5dp"
+                android:layout_above="@+id/date_time_tv"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/image_view"
+                android:id="@+id/img_name"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/prox_nova_reg_font"
+                android:layout_marginRight="@dimen/dime_5dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="14dp"
+                android:maxLines="1"
+                android:paddingTop="@dimen/dime_5dp"
+                android:gravity="right|bottom"
+                android:paddingBottom="@dimen/dime_5dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/image_view"
+                android:id="@+id/date_time_tv"/>
+
+            <ImageView
+                android:layout_height="35dp"
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/del_item"
+
+
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_delete"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

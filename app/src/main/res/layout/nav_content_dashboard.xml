@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:text="@string/favourites"
+        android:id="@+id/nav_fav_tv"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_20dp"
+        style="@style/prox_nova_reg_font"
+        />
+    <TextView
+        android:text="@string/swtich_coporate"
+        android:id="@+id/nav_swtch_crp_tv"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_20dp"
+        android:visibility="visible"
+        style="@style/prox_nova_reg_font"
+        />
+    <TextView
+        android:text="@string/apps"
+        android:id="@+id/nav_apps_tv"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/dimen_40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_20dp"
+        style="@style/prox_nova_reg_font"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="#BDBDBD"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/list_view"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/list_view_footer"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="#BDBDBD"/>
+    <TextView
+        android:text="@string/about_us"
+        android:id="@+id/nav_about_us_tv"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/dimen_40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_20dp"
+        style="@style/prox_nova_reg_font"
+        />
+
+    <TextView
+        android:text="@string/need_help"
+        android:id="@+id/nav_help_tv"
+        android:gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/dimen_40dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_20dp"
+        style="@style/prox_nova_reg_font"
+        />
+
+
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,161 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        mavenLocal()
+        maven {
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+        }
+        maven {
+            name "vsts-maven-adal-android"
+            url "https://identitydivision.pkgs.visualstudio.com/_packaging/AndroidADAL/maven/v1"
+            credentials {
+                username System.getenv("ENV_VSTS_MVN_ANDROIDADAL_USERNAME") != null ? System.getenv("ENV_VSTS_MVN_ANDROIDADAL_USERNAME") : project.findProperty("vstsUsername")
+                password System.getenv("ENV_VSTS_MVN_ANDROIDADAL_ACCESSTOKEN") != null ? System.getenv("ENV_VSTS_MVN_ANDROIDADAL_ACCESSTOKEN") : project.findProperty("vstsMavenAccessToken")
+            }
+        }
+        jcenter()
+    }
+
+}
+
+android {
+
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/jersey-module-version']
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.eka.CACApp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 330
+        versionName "3.46.0"
+
+        buildConfigField("String", "SFNT_KEY",  SFNT_KEY)
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                "appAuthRedirectScheme": "com.okta.dev-425491"
+        ]
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            debuggable false
+            shrinkResources true
+            proguardFiles 'proguard.txt'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    def nav_version = "2.3.4"
+    def retrofit_version = "2.6.2"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.4.1'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //glide library
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // JS evaluator
+   // implementation 'com.github.evgenyneu:js-evaluator-for-android:v5.0.0'
+
+    //for highcharts
+    implementation 'com.github.highcharts:highcharts-android:9.3.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    //for intercom chat sdk
+    implementation 'io.intercom.android:intercom-sdk-base:12.1.1'
+
+
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+  
+    implementation 'com.google.android.play:core:1.10.3'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "androidx.security:security-crypto:1.1.0-alpha03"
+
+    implementation 'com.burhanrashid52:photoeditor:1.5.0'
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.1')
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+
+    //for okta login
+    implementation 'com.okta.android:okta-oidc-android:1.0.19'
+
+    //MSAL login
+    implementation 'com.microsoft.identity.client:msal:2.+'
+    implementation 'com.microsoft.graph:microsoft-graph:1.5.+'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation 'org.jsoup:jsoup:1.8.3'
+
+    implementation 'com.google.android.gms:play-services-analytics:17.0.1'
+
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation "com.google.android.gms:play-services-safetynet:17.0.0"
+    implementation 'com.google.http-client:google-http-client-jackson2:1.22.0'
+
+    // Apache HttpClient is used to verify the hostname against the signed certificate in OfflineVerify.
+    /*implementation 'org.apache.httpcomponents:httpclient:4.5.2'
+
+    implementation ('org.apache.httpcomponents:httpmime:4.2.6'){
+        exclude module: 'httpclient'
+    }*/
+   // implementation 'org.apache.httpcomponents:httpclient:4.2.6'
+}

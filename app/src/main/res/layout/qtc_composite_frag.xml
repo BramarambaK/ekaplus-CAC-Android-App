@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/header"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        app:titleTextAppearance="@style/app_bar_ttl_style"
+        style="@style/prox_nova_reg_font"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/back_img"
+
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+
+            android:src="@drawable/ic_arrow_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/service_ttl"
+            android:layout_toRightOf="@+id/back_img"
+            android:layout_toLeftOf="@+id/more_img"
+            style="@style/prox_nova_reg_font"
+            android:paddingLeft="@dimen/dimen_20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/dimen_20dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/more_img"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:paddingLeft="@dimen/dimen_10dp"
+            android:src="@drawable/ic_more"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/search_lay"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_height="@dimen/dimen_50dp">
+            <TextView
+                android:text="@string/cancel_search_u"
+                style="@style/prox_nova_reg_font"
+                android:layout_alignParentRight="true"
+                android:textColor="#777575"
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:layout_height="match_parent"
+
+
+                />
+            <androidx.appcompat.widget.SearchView
+
+                android:layout_width="match_parent"
+                android:id="@+id/search_view"
+                android:layout_toLeftOf="@+id/close"
+                app:queryHint="Search"
+                android:visibility="visible"
+                android:background="@null"
+                app:closeIcon="@android:color/transparent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layoutDirection="rtl"
+                android:layout_height="@dimen/dimen_50dp"/>
+            <!--            android:background="@drawable/search_border_bg"-->
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_below="@+id/search_lay"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:layout_height="35dp"
+            app:tabIndicatorColor="@color/app_primary_clr"
+            app:tabTextColor="@color/app_primary_clr"
+            android:background="#F4F3F3">
+        </com.google.android.material.tabs.TabLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/details_view"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_below="@+id/tabLayout"
+            android:layout_height="wrap_content">
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:id="@+id/detailCard"
+               app:cardCornerRadius="@dimen/dimen_10dp"
+               android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/qtc_recycler_view"
+            android:layout_below="@+id/details_view"
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:layout_above="@+id/bottomNavigationView"
+            android:layout_height="match_parent"
+
+            />
+        <TextView
+            android:id="@+id/list_empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/details_view"
+            style="@style/prox_nova_reg_font"
+            android:layout_above="@+id/bottomNavigationView"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_20dp"
+            android:text="@string/no_record_found" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/qtc_list_footr_bg"
+            app:itemBackground="@color/qtc_list_footr_bg"
+            app:itemIconTint="@color/black"
+            android:visibility="gone"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/qtc_list_bottom_nav_menu"/>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

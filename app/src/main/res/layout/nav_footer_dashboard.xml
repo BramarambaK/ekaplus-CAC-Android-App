@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:text="Version 1.0"
+        android:id="@+id/version_name_tv"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_16dp"
+        style="@style/prox_nova_reg_font"
+        />
+    <TextView
+        android:text="@string/eka_footer_txt"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:id="@+id/footer_tv"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#002D49"
+        android:textSize="@dimen/dimen_16dp"
+        style="@style/prox_nova_reg_font"
+        />
+
+
+</LinearLayout>

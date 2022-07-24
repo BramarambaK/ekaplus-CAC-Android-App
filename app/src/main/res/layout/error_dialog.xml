@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:id="@+id/header"
+        android:text="@string/error"
+        android:textStyle="bold"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/error_dlg_hdr_bg"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_dialog"
+        android:layout_below="@+id/header"
+        style="@style/prox_nova_reg_font"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginLeft="@dimen/dime_5dp"
+        android:layout_marginRight="@dimen/dime_5dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:textSize="@dimen/err_dlg_txt_size"
+        android:textColor="@color/err_dlg_txt_clr"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:text="@string/ok"
+        style="@style/prox_nova_reg_font"
+        android:id="@+id/btn_dialog"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/text_dialog"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="@color/err_dlg_btn_bg"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

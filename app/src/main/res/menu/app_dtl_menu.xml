@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Fav"
+        app:showAsAction="always"
+        android:id="@+id/menu_item_fav"
+        android:icon="@drawable/ic_star_border"
+        />
+
+    <item
+        android:title="@string/share"
+        android:id="@+id/dwnld_insight"
+        >
+    </item>
+    <item
+        android:title="What am I seeing ?"
+        android:id="@+id/what_i_see"
+        >
+    </item>
+    <item
+        android:title="Learn more"
+        android:id="@+id/learn_more"
+        >
+    </item>
+
+</menu>

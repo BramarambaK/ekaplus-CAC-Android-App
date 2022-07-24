@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/search_lay"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:layout_height="@dimen/dimen_50dp">
+            <TextView
+                android:text="@string/cancel_search_u"
+                style="@style/prox_nova_reg_font"
+                android:layout_alignParentRight="true"
+                android:textColor="#777575"
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/dimen_16dp"
+                android:layout_marginRight="@dimen/dimen_16dp"
+                android:layout_height="match_parent"
+
+
+                />
+        <androidx.appcompat.widget.SearchView
+
+            android:layout_width="match_parent"
+            android:id="@+id/search_view"
+            android:layout_toLeftOf="@+id/close"
+            app:queryHint="Search"
+            android:visibility="visible"
+            android:background="@null"
+            app:closeIcon="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layoutDirection="rtl"
+            android:layout_height="@dimen/dimen_50dp"/>
+<!--            android:background="@drawable/search_border_bg"-->
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/qtc_recycler_view"
+            android:layout_below="@+id/search_lay"
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:layout_above="@+id/bottomNavigationView"
+            android:layout_height="match_parent"
+
+             />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/qtc_list_footr_bg"
+            app:itemBackground="@color/qtc_list_footr_bg"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            app:menu="@menu/qtc_list_bottom_nav_menu"/>
+    </RelativeLayout>
+</layout>

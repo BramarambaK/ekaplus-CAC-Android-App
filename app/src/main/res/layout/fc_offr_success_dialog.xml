@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff">
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_fc_success_icon"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_msg"
+        style="@style/prox_nova_reg_font"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/dime_5dp"
+        android:layout_marginRight="@dimen/dime_5dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:textSize="16dp"
+        android:textColor="@color/err_dlg_txt_clr"
+        android:layout_centerHorizontal="true"
+
+        android:gravity="center_horizontal" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:id="@+id/new_blank_offer"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:text="@string/create_new_blank_offer"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_16dp"
+        android:textColor="@color/app_primary_clr"
+        android:gravity="center"
+        android:background="#EDEBEB"
+        android:scaleType="fitCenter" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:id="@+id/duplicate_offer"
+        android:textAllCaps="false"
+        android:layout_margin="@dimen/dimen_18dp"
+        android:text="@string/duplicate_this_offer"
+        android:textStyle="bold"
+        style="@style/prox_nova_reg_font"
+        android:textSize="@dimen/dimen_16dp"
+        android:textColor="@color/app_primary_clr"
+        android:gravity="center"
+        android:background="#EDEBEB"
+        android:scaleType="fitCenter" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_30dp"
+        android:text="@string/exit"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_16dp"
+        style="@style/prox_nova_reg_font"
+        android:id="@+id/exit_btn"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/text_dialog"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:background="#fff"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/app_primary_clr" />
+
+</LinearLayout>

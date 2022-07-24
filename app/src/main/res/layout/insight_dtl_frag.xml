@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--<ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        >-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_lay"
+        >
+
+        <RelativeLayout
+            android:id="@+id/wb_view_hdr"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:titleTextAppearance="@style/app_bar_ttl_style"
+            style="@style/prox_nova_reg_font"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#fff"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/back_img_wv"
+                android:padding="@dimen/dimen_10dp"
+
+                android:src="@drawable/ic_close"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/service_ttl_wv"
+                android:layout_toRightOf="@+id/back_img_wv"
+                android:layout_toLeftOf="@+id/shar_img"
+                style="@style/prox_nova_reg_font"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/dimen_20dp"
+                android:textStyle="bold"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/black"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/shar_img"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dimen_10dp"
+                android:src="@drawable/share_wv"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@color/app_primary_clr"
+                android:layout_height="@dimen/dimen_1dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_below="@+id/wb_view_hdr"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:titleTextAppearance="@style/app_bar_ttl_style"
+            style="@style/prox_nova_reg_font"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_bg"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/back_img"
+
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+
+                android:src="@drawable/ic_arrow_back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/service_ttl"
+                android:layout_toRightOf="@+id/back_img"
+                android:layout_toLeftOf="@+id/more_img"
+                style="@style/prox_nova_reg_font"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/dimen_20dp"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/white"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/more_img"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:src="@drawable/ic_more"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/drill_header"
+            android:background="@drawable/drill_hdr_bg"
+            android:layout_below="@+id/header"
+            android:layout_height="@dimen/dimen_40dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_40dp"
+                android:padding="@dimen/dimen_10dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:id="@+id/drill_up"
+                android:src="@drawable/ic_drill_up"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                style="@style/prox_nova_reg_font"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/drill_up"
+                android:layout_toLeftOf="@+id/drill_down"
+                android:textSize="@dimen/dimen_16dp"
+                android:textColor="@color/black"
+                android:id="@+id/drill_header_ttl"/>
+            <ImageView
+                android:layout_width="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:id="@+id/drill_down"
+                android:padding="@dimen/dimen_10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_drill_down_all"/>
+        </RelativeLayout>
+        <!--            <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:id="@+id/chart_ll"
+                        android:layout_height="match_parent">-->
+        <com.highsoft.highcharts.core.HIChartView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/drill_header"
+            android:layout_above="@+id/bottomNavigationView"
+            android:id="@+id/hightChartV"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/drill_header"
+            android:visibility="gone"
+            android:layout_above="@+id/bottomNavigationView"
+            android:id="@+id/chart_erro_v"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/prox_nova_reg_font"
+                android:textColor="#000"
+                android:textSize="@dimen/dimen_20dp"
+                android:text="@string/unable_to_render_chart"/>
+        </RelativeLayout>
+        <!--            </LinearLayout>-->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/qtc_list_footr_bg"
+            app:itemBackground="@color/qtc_list_footr_bg"
+            app:itemIconTint="@color/insight_footer_tab_item_bg"
+            app:itemTextColor="@color/insight_footer_tab_item_bg"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/insght_dtl_bottom_nav_menu"/>
+    </RelativeLayout>
+    <!--    </ScrollView>-->
+</layout>

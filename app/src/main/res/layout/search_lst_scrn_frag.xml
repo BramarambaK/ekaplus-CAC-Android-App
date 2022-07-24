@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/search_lay"
+        android:background="@color/toolbar_bg"
+        android:visibility="visible"
+        android:layout_height="@dimen/dimen_60dp">
+        <TextView
+            android:text="@string/cancel_search_u"
+            style="@style/prox_nova_reg_font"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            android:layout_marginRight="@dimen/dimen_16dp"
+            android:layout_height="match_parent"
+
+
+            />
+        <androidx.appcompat.widget.SearchView
+
+            android:layout_width="match_parent"
+            android:id="@+id/search_view"
+            android:layout_toLeftOf="@+id/close"
+            app:queryHint="Search"
+            app:queryBackground="@android:color/transparent"
+            android:visibility="visible"
+            android:background="@drawable/rounded_srch_v"
+            android:layout_marginLeft="@dimen/dimen_16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layoutDirection="rtl"
+            android:layout_marginTop="13dp"
+            android:layout_height="35dp"/>
+        <!--            android:background="@drawable/search_border_bg"-->
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/search_results"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_below="@+id/search_lay"
+            android:textSize="@dimen/dimen_18dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:id="@+id/search_rslt_tv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/search_rslt_tv"
+            android:id="@+id/search_recycler_view"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/recently_visited"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:layout_below="@+id/search_recycler_view"
+            android:textSize="@dimen/dimen_18dp"
+            android:id="@+id/rec_vstd_tv"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/rec_vstd_tv"
+            android:id="@+id/rec_vis_recycler_view"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
+</layout>

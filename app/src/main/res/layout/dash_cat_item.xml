@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dime_5dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/dimen_70dp"
+            >
+            <View
+                android:layout_width="@dimen/dimen_10dp"
+                android:id="@+id/view"
+                android:background="@color/dash_row_start_clr"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/category_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=""
+                android:textStyle="bold"
+                android:textColor="#002D49"
+                android:textSize="@dimen/dimen_18dp"
+                android:layout_toRightOf="@+id/view"
+                android:layout_toLeftOf="@+id/app_count_tv"
+                style="@style/prox_nova_reg_font"
+                 />
+
+            <TextView
+                android:id="@+id/app_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="2"
+
+                android:background="@drawable/app_count_tv_bg"
+                android:textColor="#002D49"
+                android:textSize="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

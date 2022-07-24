@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/hdr_lay"
+        android:background="@drawable/ll_with_bottom_border"
+        android:layout_height="@dimen/dimen_50dp">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_30dp"
+            android:id="@+id/close_icon"
+            android:src="@drawable/ic_close"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            style="@style/prox_nova_reg_font"
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:textSize="@dimen/sign_in_hdr_txt_size"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/hdr_lay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/account_tv"
+            android:text="@string/account"
+
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            style="@style/prox_nova_reg_font"
+            android:textSize="22dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+
+            android:layout_height="@dimen/dimen_40dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="#636060"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/change_pass_tv"
+            android:text="@string/change_password"
+            android:background="#97E3E2E2"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_20dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+
+            android:layout_height="@dimen/dimen_40dp"
+            app:drawableRightCompat="@drawable/ic_arrow_right" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:id="@+id/chang_pass_footr"
+            android:background="#636060"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/logout_tv"
+            android:text="@string/logout"
+            android:background="#97E3E2E2"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            style="@style/prox_nova_reg_font"
+            android:textSize="@dimen/dimen_20dp"
+            android:paddingLeft="@dimen/dimen_20dp"
+
+            android:layout_height="@dimen/dimen_40dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="#636060"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_40dp">
+
+    <!--<CheckBox
+        android:layout_width="match_parent"
+        android:id="@+id/chk_box"
+
+        android:text="Test"
+        android:textColor="#000"
+        android:textSize="19dp"
+        android:gravity="center_vertical"
+        style="@style/prox_nova_reg_font"
+        android:paddingLeft="@dimen/dime_5dp"
+        android:layout_height="match_parent"
+        />-->
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:id="@+id/tv"
+        android:text=""
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:textColor="#000"
+        android:textSize="19dp"
+        android:gravity="center_vertical"
+        style="@style/prox_nova_reg_font"
+        android:paddingLeft="@dimen/dime_5dp"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

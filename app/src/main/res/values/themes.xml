@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.EKA" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="prox_nova_reg_font">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
+    <style name="app_bar_ttl_style">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ekaRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/app_primary_clr</item>
+        <item name="colorControlActivated">@color/app_primary_clr</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <declare-styleable name="FC_DTL_TXT_V">
+        <attr name="fc_value" format="string"/>
+        <attr name="fc_label" format="string"/>
+        <attr name="fc_label_bold" format="string"/>
+        <attr name="fc_value_bold" format="string"/>
+    </declare-styleable>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--   to avoid overlay of popup window in toolbar -->
+        <item name="android:itemBackground">#F6F6F6</item>
+        <item name="actionOverflowMenuStyle">@style/toolBarStyle</item>
+    </style>
+    <style name="toolBarStyle" parent="AppTheme">
+        <item name="popupTheme">@style/toolbarPopup</item>
+    </style>
+
+    <style name="toolbarPopup" parent="@android:style/Widget.Holo.ListPopupWindow">  <!--ThemeOverlay.AppCompat.Light-->
+        <item name="android:popupBackground">#AF0000</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5dp</item>
+
+    </style>
+</resources>

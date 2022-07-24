@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.DesignDomainPage">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:background="@drawable/ll_with_bottom_border"
+                android:layout_height="@dimen/dimen_50dp">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:id="@+id/close_icon"
+                    android:src="@drawable/ic_close"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_30dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    style="@style/prox_nova_reg_font"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/sign_in_hdr_txt_clr"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:textSize="@dimen/sign_in_hdr_txt_size"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="@color/user_name_txt_clr"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                android:layout_marginStart="@dimen/dimen_20dp" />
+
+            <com.eka.cacapp.utils.NoMenuEditText
+                android:id="@+id/user_name_edttxt"
+                android:layout_width="match_parent"
+                android:padding="@dimen/dime_5dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:singleLine="true"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:background="@drawable/login_edt_background"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:importantForAutofill="no"
+                android:longClickable="false"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                style="@style/prox_nova_reg_font"
+                />
+
+
+            <TextView
+                android:id="@+id/password_tv"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:textColor="@color/pass_txt_clr"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/password"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+
+                style="@style/prox_nova_reg_font"
+                />
+
+            <com.eka.cacapp.utils.NoMenuEditText
+                android:id="@+id/password_edttxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_40dp"
+                android:padding="@dimen/dime_5dp"
+                android:layout_marginTop="@dimen/dime_5dp"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:background="@drawable/login_edt_background"
+                android:importantForAutofill="no"
+                android:longClickable="false"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+
+                style="@style/prox_nova_reg_font"
+                />
+
+            <Button
+                android:id="@+id/sign_in_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_60dp"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.20"
+                android:textSize="@dimen/sign_in_btn_txt_size"
+                android:text="@string/sign_in"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/sign_in_txt_clr"
+                android:background="@drawable/login_btn_bg"
+                style="@style/prox_nova_reg_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_edttxt"
+                />
+
+            <TextView
+                android:id="@+id/problem_sing_in_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/problem_in_logging_in"
+                style="@style/prox_nova_reg_font"
+                android:lineSpacingMultiplier="1.14"
+                app:layout_constraintTop_toBottomOf="@+id/sign_in_btn"
+                android:textColor="@color/problem_login_txt_clr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/problem_login_txt_size" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

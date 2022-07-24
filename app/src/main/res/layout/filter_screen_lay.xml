@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent_lay"
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/filter_hdr"
+            android:background="@drawable/ll_with_bottom_border"
+            android:layout_height="@dimen/dimen_50dp">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:id="@+id/close_icon"
+                android:src="@drawable/ic_close"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_height="@dimen/dimen_30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/filter"
+                android:textColor="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:textSize="@dimen/sign_in_hdr_txt_size"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/filter_hdr"
+        android:layout_above="@+id/filter_footer"
+        android:fitsSystemWindows="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_lay"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:id="@+id/filter_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/dimen_50dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/reset"
+                android:id="@+id/reset_tv"
+                android:textColor="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/sign_in_hdr_txt_size"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/apply_tv"
+                style="@style/prox_nova_reg_font"
+                android:text="@string/apply"
+                android:textColor="#fff"
+                android:background="@color/sign_in_hdr_txt_clr"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="@dimen/sign_in_hdr_txt_size"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

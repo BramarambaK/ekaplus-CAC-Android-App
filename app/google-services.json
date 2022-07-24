@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1017102760886",
+    "firebase_url": "https://eka-prod.firebaseio.com",
+    "project_id": "eka-prod",
+    "storage_bucket": "eka-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017102760886:android:a1448d02721a0e30",
+        "android_client_info": {
+          "package_name": "com.eka.CACApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1017102760886-qkruaaqa0c0pgbmrnnbt155occgblvfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB49wUeJSZ4jO6WYqMMII8y7nqt9z1cEIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1017102760886-qkruaaqa0c0pgbmrnnbt155occgblvfj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1017102760886-lgqii1g7e3la6m0p69bs5povr971702s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ekaplus.EkaAnalytics.ios",
+                "app_store_id": "1326137979"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.drawerlayout.widget.DrawerLayout
+
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_dashboard"
+        app:menu="@menu/dashboard_drawer" />
+
+    -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/nav_header"
+                layout="@layout/nav_header_dashboard" />
+
+            <include
+                android:id="@+id/nav_content"
+                android:layout_below="@+id/nav_header"
+                android:layout_above="@+id/nav_footer"
+                layout="@layout/nav_content_dashboard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+<!--            android:layout_margin="@dimen/dimen_16dp"-->
+            <include
+                android:id="@+id/nav_footer"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dimen_16dp"
+                layout="@layout/nav_footer_dashboard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+<!--            <include layout="@layout/navigation_drawer_menu" />-->
+        </RelativeLayout>
+        </ScrollView>
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+</layout>
